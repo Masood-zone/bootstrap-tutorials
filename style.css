@@ -1,3 +1,7 @@
 :root {
   --priamry: "#F63A61";
 }
+
+section {
+  padding: 60px 0;
+}
