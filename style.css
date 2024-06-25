@@ -5,7 +5,7 @@ body {
 }
 
 .bg-banner {
-  background: url("/assets/images/banner.png");
+  background: url("assets/images/banner.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@ body {
 }
 
 .about-banner {
-  background: url("/assets/images/about-bg.png");
+  background: url("assets/images/about-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body {
 }
 
 .product-banner {
-  background: url("/assets/images/products-bg.png");
+  background: url("assets/images/products-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@ body {
 }
 
 .testimonial-banner {
-  background: url("/assets/images/testi-bg.png");
+  background: url("assets/images/testi-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@ body {
 }
 
 .cta-banner {
-  background: url("/assets/images/cta-bg.png");
+  background: url("assets/images/cta-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
