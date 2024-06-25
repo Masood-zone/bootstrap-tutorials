@@ -1,3 +1,49 @@
-:root {
-  --priamry: "#F63A61";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.bg-banner {
+  background: url("/assets/images/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.about-banner {
+  background: url("/assets/images/about-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.product-banner {
+  background: url("/assets/images/products-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  padding: 45px 0;
+}
+
+.testimonial-banner {
+  background: url("/assets/images/testi-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+}
+
+.cta-banner {
+  background: url("/assets/images/cta-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
 }
