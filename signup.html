@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitrana works | Signup Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-image: url("/assets/images/background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .card {
+        width: 100%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        /* padding: 20px; */
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Signup section -->
+    <section class="signup">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="card">
+              <div class="card-header">
+                <h4>Signup</h4>
+              </div>
+              <div class="card-body">
+                <form
+                  id="signupForm"
+                  action="/index.html"
+                  method="POST"
+                  enctype="multipart/form-data"
+                >
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      name="username"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      required
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                  <div class="mb-3 position-relative">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      name="password"
+                      required
+                      minlength="8"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary position-absolute end-0 top-0"
+                      id="togglePassword"
+                      style="margin-right: 10px; margin-top: 25px"
+                    >
+                      Show
+                    </button>
+                    <div class="invalid-feedback">
+                      Password must be at least 8 characters long.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="fileUpload" class="form-label"
+                      >Profile Picture</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="fileUpload"
+                      name="fileUpload"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="singleSelect" class="form-label">Country</label>
+                    <select
+                      class="form-select"
+                      id="singleSelect"
+                      name="singleSelect"
+                      required
+                    >
+                      <option value="">Select your country</option>
+                      <option value="USA">USA</option>
+                      <option value="Canada">Canada</option>
+                      <option value="UK">UK</option>
+                      <!-- Add more options as needed -->
+                    </select>
+                    <div class="invalid-feedback">Please select a country.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="multiSelect" class="form-label"
+                      >Languages Spoken</label
+                    >
+                    <select
+                      class="form-select"
+                      id="multiSelect"
+                      name="multiSelect[]"
+                      multiple
+                      required
+                    >
+                      <option value="English">English</option>
+                      <option value="Spanish">Spanish</option>
+                      <option value="French">French</option>
+                      <!-- Add more options as needed -->
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select at least one language.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="bio" class="form-label">Bio</label>
+                    <textarea
+                      class="form-control"
+                      id="bio"
+                      name="bio"
+                      rows="3"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="range" class="form-label"
+                      >Experience Level</label
+                    >
+                    <input
+                      type="range"
+                      class="form-range"
+                      id="range"
+                      name="range"
+                      min="1"
+                      max="10"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="dob"
+                      name="dob"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Gender</label><br />
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male"
+                        required
+                      />
+                      <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                        required
+                      />
+                      <label class="form-check-label" for="female"
+                        >Female</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="other"
+                        value="other"
+                        required
+                      />
+                      <label class="form-check-label" for="other">Other</label>
+                    </div>
+                    <div class="invalid-feedback">
+                      Please select your gender.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Hobbies</label><br />
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="hobbies"
+                        id="hobby1"
+                        value="reading"
+                        required
+                      />
+                      <label class="form-check-label" for="hobby1"
+                        >Reading</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="hobbies"
+                        id="hobby2"
+                        value="traveling"
+                        required
+                      />
+                      <label class="form-check-label" for="hobby2"
+                        >Traveling</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="hobbies"
+                        id="hobby3"
+                        value="sports"
+                        required
+                      />
+                      <label class="form-check-label" for="hobby3"
+                        >Sports</label
+                      >
+                    </div>
+                    <div class="invalid-feedback">
+                      Please select at least one hobby.
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Signup</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+        const signupForm = document.getElementById("signupForm");
+
+        togglePassword.addEventListener("click", () => {
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+          togglePassword.textContent = type === "password" ? "Show" : "Hide";
+        });
+
+        signupForm.addEventListener("submit", (event) => {
+          if (!signupForm.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+            signupForm.classList.add("was-validated");
+          }
+        });
+      });
+    </script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
